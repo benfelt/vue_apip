@@ -10,6 +10,9 @@
 </template>
 
 <script>
+
+import HttpClient from '@/helpers/HttpClient'
+
 export default {
     name: 'MyFormInputComponent',
     data() {
@@ -22,6 +25,14 @@ export default {
     methods: {
         submit() {
             console.log("Submit MyForm", this.greeting)
+            let http = new HttpClient('greetings')
+            http.create(this.greeting)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
         }
     }
 }
