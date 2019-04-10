@@ -1,6 +1,11 @@
 <template>
     <div id='my-form-input-component'>
-        <input type="text" placeholder="Let us greet ..." v-model="greeting.name"/><button @click="submit()">Save</button>
+        <b-input-group prepend="Let us greet ..." class="mt-3">
+            <b-form-input v-model="greeting.name"></b-form-input>
+            <b-input-group-append>
+                <b-button variant="info" @click="submit">Save</b-button>
+            </b-input-group-append>
+        </b-input-group>
     </div>
 </template>
 

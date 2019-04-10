@@ -1,6 +1,12 @@
 <template>
   <div class="myform">
-    <MyFormInputComponent />
+    <b-container>
+      <b-row>
+        <b-col></b-col>
+        <b-col cols="10"><MyFormInputComponent /></b-col>
+        <b-col></b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -9,10 +15,9 @@
 import MyFormInputComponent from '@/components/MyFormInputComponent'
 
 export default {
-  name: 'MyFormView'  ,
+  name: 'MyFormView',
   components: {
     MyFormInputComponent
   }
 }
 </script>
-
