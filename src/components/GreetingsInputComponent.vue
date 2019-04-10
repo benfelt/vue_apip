@@ -12,9 +12,10 @@
 <script>
 
 import HttpClient from '@/helpers/HttpClient'
+import EventBus from '@/helpers/EventBus'
 
 export default {
-    name: 'MyFormInputComponent',
+    name: 'GreetingsInputComponent',
     data() {
         return {
             greeting: {
@@ -28,7 +29,7 @@ export default {
             let http = new HttpClient('greetings')
             http.create(this.greeting)
             .then(response => {
-                console.log(response)
+                EventBus.$emit('GreetingsInputComponent::submit')
             })
             .catch(error => {
                 console.log(error)

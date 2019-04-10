@@ -3,7 +3,12 @@
     <b-container>
       <b-row>
         <b-col></b-col>
-        <b-col cols="10"><MyFormInputComponent /></b-col>
+        <b-col cols="10"><GreetingsInputComponent /></b-col>
+        <b-col></b-col>
+      </b-row>
+      <b-row>
+        <b-col></b-col>
+        <b-col cols="10"><GreetingsListComponent /></b-col>
         <b-col></b-col>
       </b-row>
     </b-container>
@@ -12,12 +17,14 @@
 
 <script>
 
-import MyFormInputComponent from '@/components/MyFormInputComponent'
+import GreetingsInputComponent from '@/components/GreetingsInputComponent'
+import GreetingsListComponent from '@/components/GreetingsListComponent'
 
 export default {
   name: 'MyFormView',
   components: {
-    MyFormInputComponent
+    GreetingsInputComponent,
+    GreetingsListComponent
   }
 }
 </script>
