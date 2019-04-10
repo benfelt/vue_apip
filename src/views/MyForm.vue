@@ -1,5 +1,18 @@
 <template>
   <div class="myform">
-    <h1>My Form view</h1>
+    <MyFormInputComponent />
   </div>
 </template>
+
+<script>
+
+import MyFormInputComponent from '@/components/MyFormInputComponent'
+
+export default {
+  name: 'MyFormView'  ,
+  components: {
+    MyFormInputComponent
+  }
+}
+</script>
+
