@@ -8,7 +8,7 @@
       </b-row>
       <b-row>
         <b-col></b-col>
-        <b-col cols="10"><GreetingsListComponent /></b-col>
+        <b-col cols="10"><GreetingsListComponent title="dear" /></b-col>
         <b-col></b-col>
       </b-row>
     </b-container>

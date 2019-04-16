@@ -14,9 +14,16 @@
 
 import EventBus from '@/helpers/EventBus'
 import HttpClient from '@/helpers/HttpClient'
+import { truncateSync } from 'fs';
 
 export default {
     name: 'GreetingsListComponent',
+    props: {
+        title: {
+            type: String,
+            required: true
+        }
+    },
     data() {
         return {
             greetings: null,
@@ -34,7 +41,8 @@ export default {
             
             let filters = {
                 "page": 1,
-                "itemsPerPage": 10
+                "itemsPerPage": 10,
+                "name": this.title
             }
 
             http.read(filters)
