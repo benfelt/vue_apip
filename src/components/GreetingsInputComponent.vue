@@ -1,7 +1,12 @@
 <template>
     <div id='my-form-input-component'>
+        <b-alert show variant="primary" v-if="errors.any()">
+            <h4 class="alert-heading">Error in form</h4>
+            <hr>
+            {{errors.all()[0]}}
+        </b-alert>
         <b-input-group prepend="Let us greet ..." class="mt-3">
-            <b-form-input v-model="greeting.name"></b-form-input>
+            <b-form-input name="name" v-model="greeting.name" v-validate="{ required: true, min:3, max:10 }"></b-form-input>
             <b-input-group-append>
                 <b-button variant="info" @click="submit">Save</b-button>
             </b-input-group-append>
